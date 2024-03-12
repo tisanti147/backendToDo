@@ -57,8 +57,11 @@ router.patch('/putTask/:id', getTaskById, async (req, res) => {
 })
 
 router.delete('/deleteTask/:id', getTaskById, async (req, res) => {
+    console.log('entrando');
     try{
+        console.log('deleteando...');
         await task.findByIdAndDelete(req.params.id)
+        console.log('deleteado');
         res.json({message: 'Task deleted'})
     }catch (err){
         res.status(500).json({message: err.message})
