@@ -3,6 +3,8 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const app = express();
+const methodOverride = require('method-override');
+app.use(methodOverride('_method'));
 
 
 mongoose.connect("mongodb+srv://tisanti:ensolvers@cluster0.ufmaakm.mongodb.net/");
