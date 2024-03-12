@@ -5,7 +5,7 @@ const cors = require('cors');
 const app = express();
 
 
-mongoose.connect(process.env.DATABASE_URL);
+mongoose.connect("mongodb+srv://tisanti:ensolvers@cluster0.ufmaakm.mongodb.net/");
 const db = mongoose.connection;
 db.on('error', (error) => console.error(error));
 db.once('open', () => console.log('Connected to Database'));
