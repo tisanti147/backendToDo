@@ -1,1 +1,1 @@
-GET http://localhost:3000/users/getUser/65ef62c81aaeb1e94641cdae
+GET http://localhost:3000/users/getUsers
