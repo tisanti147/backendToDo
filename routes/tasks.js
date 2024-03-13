@@ -69,6 +69,7 @@ router.delete('/deleteTask/:id', getTaskById, async (req, res) => {
 
 async function getTaskById(req, res, next){
     let t
+    console.log("buscando task para delete");
     try{
         t = await task.findById(req.params.id)
         if(t == null){
