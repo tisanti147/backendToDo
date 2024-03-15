@@ -60,7 +60,7 @@ router.delete('/deleteTask/:id', getTaskById, async (req, res) => {
     console.log('entrando al delete');
     try{
         console.log('deleteando');
-        await task.deleteOne({_id: req.params.id})
+        await task.findByIdAndDelete(req.params.id)
         res.json({message: 'Task deleted'})
     }catch (err){
         res.status(500).json({message: err.message})
